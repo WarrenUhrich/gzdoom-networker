@@ -11,10 +11,10 @@ echo Game Location: %GZDOOM_LOCATION%
 echo Would you like to use a custom WAD? (y/n) 
 set /p CUSTOM_WAD=
 
-IF %CUSTOM_WAD%=y (
+IF %CUSTOM_WAD%==y (
     echo:
     echo:
-    echo Please paste the path for your custom WAD (right-click to paste):
+    echo Please paste the path for your custom WAD - right-click to paste:
     set /p CUSTOM_WAD_PATH=
     set GZDOOM_LOCATION=%GZDOOM_LOCATION% %CUSTOM_WAD_PATH%
   )
@@ -29,8 +29,8 @@ echo:
 echo:
 
 IF %HOST_OR_JOIN%==host (
-    GOTO :host
-  )
+  GOTO :host
+)
 
 echo The GZDoom Networker is now in Joining Mode.
 
